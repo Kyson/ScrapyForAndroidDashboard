@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+
+<script>
+var SCREEN_DATA =
+[
+  {
+    "data": {
+      "Large": {
+        "hdpi": "0.4",
+        "ldpi": "0.1",
+        "mdpi": "3.6",
+        "tvdpi": "1.8",
+        "xhdpi": "0.4"
+      },
+      "Normal": {
+        "hdpi": "35.4",
+        "mdpi": "2.3",
+        "tvdpi": "0.2",
+        "xhdpi": "34.3",
+        "xxhdpi": "16.8"
+      },
+      "Small": {
+        "ldpi": "1.1"
+      },
+      "Xlarge": {
+        "hdpi": "0.5",
+        "mdpi": "2.5",
+        "xhdpi": "0.6"
+      }
+    },
+    "densitychart": "//chart.googleapis.com/chart?chco=c4df9b%2C6fad0c&cht=p&chs=400x250&chl=ldpi%7Cmdpi%7Ctvdpi%7Chdpi%7Cxhdpi%7Cxxhdpi&chd=t%3A1.2%2C8.4%2C2.0%2C36.3%2C35.3%2C16.8&chf=bg%2Cs%2C00000000",
+    "layoutchart": "//chart.googleapis.com/chart?chco=c4df9b%2C6fad0c&cht=p&chs=400x250&chl=Xlarge%7CLarge%7CNormal%7CSmall&chd=t%3A3.6%2C6.3%2C89.0%2C1.1&chf=bg%2Cs%2C00000000"
+  }
+];
+
+
+var VERSION_DATA =
+[
+  {
+    "chart": "//chart.googleapis.com/chart?chco=c4df9b%2C6fad0c&cht=p&chs=500x250&chl=Gingerbread%7CIce%20Cream%20Sandwich%7CJelly%20Bean%7CKitKat%7CLollipop%7CMarshmallow%7CNougat&chd=t%3A0.9%2C0.9%2C10.1%2C20.0%2C32.0%2C31.2%2C4.9&chf=bg%2Cs%2C00000000",
+    "data": [
+      {
+        "api": 10,
+        "name": "Gingerbread",
+        "perc": "0.9"
+      },
+      {
+        "api": 15,
+        "name": "Ice Cream Sandwich",
+        "perc": "0.9"
+      },
+      {
+        "api": 16,
+        "name": "Jelly Bean",
+        "perc": "3.5"
+      },
+      {
+        "api": 17,
+        "name": "Jelly Bean",
+        "perc": "5.1"
+      },
+      {
+        "api": 18,
+        "name": "Jelly Bean",
+        "perc": "1.5"
+      },
+      {
+        "api": 19,
+        "name": "KitKat",
+        "perc": "20.0"
+      },
+      {
+        "api": 21,
+        "name": "Lollipop",
+        "perc": "9.0"
+      },
+      {
+        "api": 22,
+        "name": "Lollipop",
+        "perc": "23.0"
+      },
+      {
+        "api": 23,
+        "name": "Marshmallow",
+        "perc": "31.2"
+      },
+      {
+        "api": 24,
+        "name": "Nougat",
+        "perc": "4.5"
+      },
+      {
+        "api": 25,
+        "name": "Nougat",
+        "perc": "0.4"
+      }
+    ]
+  }
+];
+
+
+var VERSION_NAMES =
+[
+  {"api":0},{"api":1},{"api":2},{"api":3},
+  {
+    "api":4,
+    "link":'<a href="https://developer.android.google.cn/about/versions/android-1.6.html">1.6</a>',
+    "codename":"Donut",
+  },
+  { "api":5},
+  { "api":6},
+  {
+    "api":7,
+    "link":'<a href="https://developer.android.google.cn/about/versions/android-2.1.html">2.1</a>',
+    "codename":"Eclair",
+  },
+  {
+    "api":8,
+    "link":'<a href="https://developer.android.google.cn/about/versions/android-2.2.html">2.2</a>',
+    "codename":"Froyo"
+  },
+  {
+    "api":9,
+    "link":'<a href="https://developer.android.google.cn/about/versions/android-2.3.html">2.3 -<br>2.3.2</a>',
+    "codename":"Gingerbread"
+  },
+  {
+    "api":10,
+    "link":'<a href="https://developer.android.google.cn/about/versions/android-2.3.3.html">2.3.3 -<br>2.3.7</a>',
+    "codename":"Gingerbread"
+  },
+  { "api":11},
+  {
+    "api":12,
+    "link":'<a href="https://developer.android.google.cn/about/versions/android-3.1.html">3.1</a>',
+    "codename":"Honeycomb"
+  },
+  {
+    "api":13,
+    "link":'<a href="https://developer.android.google.cn/about/versions/android-3.2.html">3.2</a>',
+    "codename":"Honeycomb"
+  },
+  { "api":14},
+  {
+    "api":15,
+    "link":'<a href="https://developer.android.google.cn/about/versions/android-4.0.html">4.0.3 -<br>4.0.4</a>',
+    "codename":"Ice Cream Sandwich"
+  },
+  {
+    "api":16,
+    "link":'<a href="https://developer.android.google.cn/about/versions/android-4.1.html">4.1.x</a>',
+    "codename":"Jelly Bean"
+  },
+  {
+    "api":17,
+    "link":'<a href="https://developer.android.google.cn/about/versions/android-4.2.html">4.2.x</a>',
+    "codename":"Jelly Bean"
+  },
+  {
+    "api":18,
+    "link":'<a href="https://developer.android.google.cn/about/versions/android-4.3.html">4.3</a>',
+    "codename":"Jelly Bean"
+  },
+  {
+    "api":19,
+    "link":'<a href="https://developer.android.google.cn/about/versions/android-4.4.html">4.4</a>',
+    "codename":"KitKat"
+  },
+  {
+    "api":20,
+    "link":'<a href="https://developer.android.google.cn/about/versions/android-4.4.html">4.4W</a>',
+    "codename":"KitKat for Wear"
+  },
+  {
+    "api":21,
+    "link":'<a href="https://developer.android.google.cn/about/versions/android-5.0.html">5.0</a>',
+    "codename":"Lollipop"
+  },
+  {
+    "api":22,
+    "link":'<a href="https://developer.android.google.cn/about/versions/android-5.1.html">5.1</a>',
+    "codename":"Lollipop"
+  },
+  {
+    "api":23,
+    "link":'<a href="https://developer.android.google.cn/about/versions/marshmallow/index.html">6.0</a>',
+    "codename":"Marshmallow"
+  },
+  {
+    "api":24,
+    "link":'<a href="https://developer.android.google.cn/about/versions/nougat/index.html">7.0</a>',
+    "codename":"Nougat"
+  },
+  {
+    "api":25,
+    "link":'<a href="https://developer.android.google.cn/about/versions/nougat/android-7.1.html">7.1</a>',
+    "codename":"Nougat"
+  }
+];
+
+
+
+</body>
+</html>
